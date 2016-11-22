@@ -79,13 +79,7 @@ public class YoRPG
 	catch ( IOException e ) { }
 	//character selection uses user input to choose character and Character.about() method to display stats
         String c;
-	c = "Well now" + " " +  name + "," +  " bef're thee beginneth thy quest, thee wilt chooseth thy charact'r!\n";
-	c += "\n============================================================================";
-	c += "\nFirst h're is some helpful inf'rmation\n";
-	c += "\n============================================================================";
-	c += Character.about();
-	c += "\n===============================================================================\n";
-	c += "\nChoose your character: \n";
+	c = "\nChoose your character: \n";
 	c += "\t1: Warrior\n";
 	c += "\t2: Babylonian\n";
 	c += "\t3: Necromancer\n";
@@ -96,8 +90,9 @@ public class YoRPG
 	
 	try {
 	    charselect = Integer.parseInt( in.readLine() );
-	    if (charselect == 1){pat = new Warrior( name );}
-	    else if (charselect == 2){
+	    if (charselect == 1){
+		pat = new Warrior( name );
+	    } else if (charselect == 2){
 		pat = new Babylonian( name );
 	    } else if (charselect == 3){
 		pat = new Necromancer( name );
@@ -106,6 +101,8 @@ public class YoRPG
 	    } else {
 		pat = new Mage( name );
 	    }
+
+	    System.out.println(pat.about());
 	}
 	catch ( IOException e ) { }
 

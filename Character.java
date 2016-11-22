@@ -1,10 +1,10 @@
 // Team NMS
 // Niko Cruz-Marsted, Marcus Ng, Shaikat Islam
 // APCS1 pd4
-// HW #32: Ye Olde Role Playing Game, Improved
-// 2016-11-18
+// HW #34: Ye Olde Role Playing Game, Unchained
+// 2016-11-22
 
-public class Character {
+public abstract class Character {
 
     protected String name;
     protected int HP;
@@ -60,50 +60,13 @@ public class Character {
         return damage;
     }
 
-    //special attack
-    public void specialize(){
-	defense -= 15;
-	attackRating += 0.3;
-    }
+    // Special attack
+    public abstract void specialize();
     
-    //reset defense and attackrating
-    public void normalize() {
-	defense = 40;
-	attackRating = 0.4;
-    }
+    // Reset defense and attackRating
+    public abstract void normalize();
 
-    // Describe class
-    public static String about() {
-	String a;
-	// Describe Warrior, Monster, Mage, Rogue, Babylonian, and Necromancer in one string
-	a = "\nBeholdeth, playeth'r! the choice of charact'r is up to thee! shalt thee beest the ruthless warri'r, straight out of the confines of the deep, with stats as follows:\n";
-	a+= "\nHealth: 125\n" + "Strength: 100\n"+ "Defense:40\n"+ "Attack Rating: 0.4\n";
-
-	a+= "\nOR shall thee beest the Babylonian, the destroyeth'r of all things sacred, the most indiff'rent, with z'ro spiritual ability,  sir?\n";
-
-	a+= "Health: 50\n" + "Strength:1619 \n"+ "Defense:30\n"+ "Attack Rating: 0.5\n" + "Spritual Ability:0\n";
-
-	a+="\nOR the mage, who is't practices the dunnest of arts\n";
-
-	a+= "Health: 100\n" + "Strength:100 \n"+ "Defense:30\n"+ "Attack Rating: 0.5\n" + "Magical Ability:12000000000000\n";
-
-	a+="\nOR the necromanc'r, the one yond endues people backeth from the dead\n";
-
-	a+= "Health: 100\n" + "Strength:100 \n"+ "Defense:30\n"+ "Attack Rating: 0.5\n" + "Death Magick:12000000000000\n";
-
-	a+="\nOR the rogue, the one yond endues pow'r from stealth and thiev'ry\n";
-
-	a+= "Health: 100\n" + "Strength:120\n"+ "Defense:35\n"+ "Attack Rating: 0.5\n" + "Thievery:12000000\n";
-	a+= "\nChooseth wisely because thy choice hast the most pow'r!";
-
-
-	return a;
-
-
-
-	
-
-	
-    }
+    // Describe Class
+    public abstract String about();
     
 }

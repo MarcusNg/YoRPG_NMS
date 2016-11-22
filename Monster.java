@@ -1,8 +1,8 @@
 // Team NMS
 // Niko Cruz-Marsted, Marcus Ng, Shaikat Islam
 // APCS1 pd4
-// HW #32: Ye Olde Role Playing Game, Improved
-// 2016-11-18
+// HW #34: Ye Olde Role Playing Game, Unchained
+// 2016-11-22
 
 public class Monster extends Character {
 
@@ -15,5 +15,23 @@ public class Monster extends Character {
     public String getName() {
         return "Monster";
     }
-    
+
+    // Special Attack
+    public void specialize() {
+	defense -= 10;
+	attackRating += 0.3;
+    }
+
+    // Reset defense and attackRating
+    public void normalize() {
+	defense = 20;
+	attackRating = 1;
+    }
+
+    // Description
+    public String about() {
+	String info;
+	info = "Generic Monster";
+	return info;
+    }
 }
