@@ -16,7 +16,7 @@ public class YoRPG
 
     //each round, a Warrior and a Monster will be instantiated...
     private Character pat;   //Is it man or woman?
-    private Monster smaug; //Friendly generic monster name?
+    private Character smaug; //Friendly generic monster name?
     
 
     private int moveCount;
@@ -130,6 +130,9 @@ public class YoRPG
 	else {
 	    System.out.println( "\nLo, yonder monster approacheth!" );
 
+	    // Random monster
+	    //int enemyNum;
+	    //enemyNum = Math.random()
 	    smaug = new Monster();
 
 	    // Current HP of each character (runs once before attack)
