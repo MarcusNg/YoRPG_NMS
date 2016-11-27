@@ -1,8 +1,8 @@
 // Team NMS
 // Niko Cruz-Marsted, Marcus Ng, Shaikat Islam
 // APCS1 pd4
-// HW #34: Ye Olde Role Playing Game, Unchained
-// 2016-11-22
+// HW #35: Ye Olde Role Playing Game, Realized
+// 2016-11-27
 
 public abstract class Character {
 

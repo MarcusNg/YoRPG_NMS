@@ -2,17 +2,13 @@
 // Niko Cruz-Marsted, Marcus Ng, Shaikat Islam
 // APCS1 pd4
 // HW #35: Ye Olde Role Playing Game, Realized
-// 2016-11-23
+// 2016-11-27
 
 public class Troll extends Character {
-    
-    private int defenseNum;
-    defenseNum = 20 + (int)(Math.random() * 30);
 
     // Overloaded constructor from superclass
     public Troll() {
-	super(150, 30 + (int)(Math.random() * 45), defenseNum, 0.7);
-	name = newName;
+	super(150, 30 + (int)(Math.random() * 45), 20 + (int)(Math.random() * 35), 0.7);
     }
 
     // Get name
@@ -28,7 +24,7 @@ public class Troll extends Character {
 
     // Reset defense and attackRating
     public void normalize() {
-	defense = defenseNum;
+	defense = getDefense();
 	attackRating = 0.4;
     }
 

@@ -131,9 +131,15 @@ public class YoRPG
 	    System.out.println( "\nLo, yonder monster approacheth!" );
 
 	    // Random monster
-	    //int enemyNum;
-	    //enemyNum = Math.random()
-	    smaug = new Monster();
+	    int enemyNum = 0;
+	    enemyNum = (int)(Math.random() * 3);
+	    if (enemyNum == 0) {
+		smaug = new Skeleton();
+	    } else if (enemyNum == 1) {
+		smaug = new Goblin();
+	    } else {
+		smaug = new Troll();
+	    }
 
 	    // Current HP of each character (runs once before attack)
 	    System.out.println("\n" + pat.getName() + " has " + pat.getHP() + " HP.");

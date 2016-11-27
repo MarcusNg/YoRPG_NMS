@@ -1,17 +1,20 @@
 // Team NMS
 // Niko Cruz-Marsted, Marcus Ng, Shaikat Islam
 // APCS1 pd4
-// HW #34: Ye Olde Role Playing Game, Unchained
-// 2016-11-22
+// HW #35: Ye Olde Role Playing Game, Realized
+// 2016-11-27
 
 public class Goblin extends Character {
-    private int defenseNum = (int)(Math.random() * 40);
-
+    
     // Overloaded constructor from superclass
-    public Goblin(int defenseNum) {
-	super((int)(Math.random() * 200), 200,defenseNum, 1.0);
-
+    public Goblin() {
+	super(100 + (int)(Math.random() * 30), 50, 20 + (int)(Math.random() * 30), 0.6);
     }
+
+    public String getName() {
+	return "Goblin";
+    }
+    
        // Special Attack
     public void specialize() {
 	defense -= 20;
@@ -20,7 +23,7 @@ public class Goblin extends Character {
 
     // Reset defense and attackRating
     public void normalize() {
-	defense = defenseNum;
+	defense = getDefense();
 	attackRating = 1.0;
     }
 

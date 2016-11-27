@@ -1,13 +1,13 @@
 // Team NMS
 // Niko Cruz-Marsted, Marcus Ng, Shaikat Islam
 // APCS1 pd4
-// HW #34: Ye Olde Role Playing Game, Unchained
-// 2016-11-22
+// HW #35: Ye Olde Role Playing Game, Realized
+// 2016-11-27
 
 public class Skeleton extends Character{
-    private int dnum  = (15 + (int)(Math.random() * 30));
+    
     public Skeleton() {
-	super(150, 20 + (int)(Math.random() * 45), dnum, 1);
+	super(150, 20 + (int)(Math.random() * 45), 15 + (int)(Math.random() * 30), 1);
     }
     
     // Get name
@@ -22,7 +22,7 @@ public class Skeleton extends Character{
 
     // Reset defense and attackRating
     public void normalize() {
-	defense = dnum;
+	defense = getDefense();
 	attackRating = 1;
     }
 
