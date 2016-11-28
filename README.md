@@ -17,7 +17,7 @@ Niko added the Skeleton.java file, Shaikat added the Goblin.java file, and Marcu
 ##Credits
 For life, liberty, and the pursuit of happiness: [Mr. Brown-Mykolyk](http://www.stuycs.org/courses/apcs/mykolyk)
 
-For the Shakespearean translator:[Joseph Rocca](http://lingojam.com/shakespearean)
+For the Shakespearean translator: [Joseph Rocca](http://lingojam.com/shakespearean)
 
 ![Alt Text](https://github.com/MarcusNg/YoRPG_NMS/blob/master/Thanks%20for%20playing.gif)
 
