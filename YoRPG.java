@@ -15,7 +15,7 @@ public class YoRPG
     public final static int MAX_ENCOUNTERS = 5;
     
     //each round, a Warrior and a Monster will be instantiated...
-    private Character pat;   //Is it man or woman?
+    private static Character pat;   //Is it man or woman?
     private Character smaug; //Friendly generic monster name?
 
     private static int moveCount;
@@ -23,8 +23,8 @@ public class YoRPG
     private int difficulty;
     private int charselect;
 
-    private InputStreamReader isr;
-    private BufferedReader in;
+    private static InputStreamReader isr;
+    private static BufferedReader in;
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -221,7 +221,7 @@ public class YoRPG
 	}
 	
 	String mC = moveCount + "";
-
+	//the game is over
 	System.out.println( "Thy game doth be over." );
 	
 	System.out.println("\n");
@@ -254,6 +254,38 @@ public class YoRPG
 	    s += "Take a break, peasant.";
 	    System.out.println(s);
 	}
+	    String stats = "\nDoth thou want thy stats?\n";
+	    stats += "\t1: Yes.\n";
+	    stats += "\t2: No.\n";
+	    System.out.println(stats);
+	
+        try {
+	    int i;
+	    i = Integer.parseInt(in.readLine());
+	    if (i == 1){
+		String x = "";
+		x += "\nName: " + pat.getName();
+		x += "\nHP: " + pat.getHP();
+		x += "\nDefense: " + pat.getstrength();
+		x += "\nAttack Rating: " + pat.getattackRating();
+		x += "\nMoves: " + mC;
+		System.out.println(x);
+	    }
+	    else{
+		
+	        String x = "\nToo bad.";
+		x += "\nName: " + pat.getName();
+		x += "\nHP: " + pat.getHP();
+		x += "\nDefense: " + pat.getstrength();
+		x += "\nAttack Rating: " + pat.getattackRating();
+		x += "\nMoves: " + mC;
+		System.out.println(x);
+	    }
+		}
+       	catch ( IOException e ) { }
+
+	
+       
 
 	
 	
