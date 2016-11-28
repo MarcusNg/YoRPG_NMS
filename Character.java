@@ -30,6 +30,16 @@ public abstract class Character {
         return name;
     }
 
+    //Get strength
+    public int getstrength(){
+	return strength;
+    }
+
+    //Get attackarating
+    public double getattackRating(){
+	return attackRating;
+    }
+
     // Get HP
     public int getHP() {
 	if (HP < 0) {
