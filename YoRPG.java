@@ -13,13 +13,12 @@ public class YoRPG
 
     //change this constant to set number of encounters in a game
     public final static int MAX_ENCOUNTERS = 5;
-
+    
     //each round, a Warrior and a Monster will be instantiated...
     private Character pat;   //Is it man or woman?
     private Character smaug; //Friendly generic monster name?
-    
 
-    private int moveCount;
+    private static int moveCount;
     private boolean gameOver;
     private int difficulty;
     private int charselect;
@@ -153,6 +152,7 @@ public class YoRPG
 		try {
 		    System.out.println( "\nDo you feel lucky?" );
 		    System.out.println( "\t1: Nay.\n\t2: Aye!" );
+		    moveCount += 1;
 		    i = Integer.parseInt( in.readLine() );
 		}
 		catch ( IOException e ) { }
@@ -219,8 +219,44 @@ public class YoRPG
 	    encounters++;
 	    System.out.println();
 	}
+	
+	String mC = moveCount + "";
 
 	System.out.println( "Thy game doth be over." );
+	
+	System.out.println("\n");
+	
+	if (moveCount > 7 && moveCount < 10 ){
+	    String s = "";
+	    s = "Thee madeth " + mC + " moves.";
+	    s += "\n";
+	    s += "Practical peasant.";
+	    System.out.println(s);
+	}
+	else if (moveCount >10  && moveCount < 14 ){
+	    String s = "";
+	    s = "Thee madeth " + mC + " moves.";
+	    s += "\n";
+	    s += "Slightly less practical peasant.";
+	    System.out.println(s);
+	}
+	else if (moveCount >14 && moveCount < 21 ){
+	    String s = "";
+	    s = "Thee madeth " + mC + " moves.";
+	    s += "\n";
+	    s += "Slightly, slightly, less practical peasant.";
+	    System.out.println(s);
+	}
+	else {
+	    String s = "";
+	    s = "Thee madeth " + mC + " moves.";
+	    s += "\n";
+	    s += "Take a break, peasant.";
+	    System.out.println(s);
+	}
+
+	
+	
 	/*================================================
 	  ================================================*/
     }//end main
